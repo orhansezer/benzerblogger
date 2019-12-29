@@ -61,13 +61,13 @@
 		clickHandler = function() {
 			if (typeof ga === "function") {
 				var link = this;
-				ga("blogger.send", {
+				ga("send", {
 					hitType: "event",
 					eventCategory: "Blogger Related Posts",
 					eventAction: "Related Post Clicked",
 					eventLabel: link.href,
 					hitCallback: function() {
-						location.href = link.href;
+						location.href = url;
 					}
 				});
 				return false;
