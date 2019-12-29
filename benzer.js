@@ -92,7 +92,6 @@
 			small = document.createElement("small");
 			small.appendChild(document.createTextNode(relatedPosts[i].categories.join(", ")));
 			li.appendChild(a);
-			li.appendChild(small);
 			ul.appendChild(li);
 		}
 		div.appendChild(ul);
