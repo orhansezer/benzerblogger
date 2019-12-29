@@ -58,21 +58,7 @@
 			return (item2.count - item1.count) || (item2.updated - item1.updated);
 		});
 		relatedPosts = relatedPosts.slice(0, config.maxPostsToDisplay);
-		clickHandler = function() {
-			if (typeof ga === "function") {
-				var link = this;
-				ga("send", {
-					hitType: "event",
-					eventCategory: "Blogger Related Posts",
-					eventAction: "Related Post Clicked",
-					eventLabel: link.href,
-					hitCallback: function() {
-						location.href = url;
-					}
-				});
-				return false;
-			}
-		};
+
 		div = document.createElement("div");
 		div.id = "blogger-related-posts";
 		div.innerHTML = "<h4>Benzer Yazılar</h4>";
